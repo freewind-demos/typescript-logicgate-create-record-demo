@@ -8,6 +8,6 @@
     "resolveJsonModule": true
   },
   "files": [
-    "hello.ts"
+    "src/hello.ts"
   ]
 }

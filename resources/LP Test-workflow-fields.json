@@ -1,0 +1,112 @@
+[
+  {
+    "fieldType": "SELECT",
+    "id": "gQrtnbyH",
+    "name": "TransferTo",
+    "label": "Transfer to",
+    "tooltip": null,
+    "currentValues": [
+      {
+        "discriminator": "Common",
+        "id": "QqoJ7kQQ",
+        "valueType": "Common",
+        "textValue": "Earth",
+        "numericValue": 1,
+        "isDefault": false,
+        "archived": false,
+        "priority": 1,
+        "fieldId": "gQrtnbyH",
+        "empty": false,
+        "default": false
+      },
+      {
+        "discriminator": "Common",
+        "id": "pTLCcbSP",
+        "valueType": "Common",
+        "textValue": "Moon",
+        "numericValue": 2,
+        "isDefault": false,
+        "archived": false,
+        "priority": 2,
+        "fieldId": "gQrtnbyH",
+        "empty": false,
+        "default": false
+      }
+    ],
+    "operators": [
+      "NULL",
+      "NOT_NULL",
+      "EQUALS",
+      "NOT_EQUALS"
+    ],
+    "convertibleTo": [
+      "CHECKBOX",
+      "MULTI_SELECT",
+      "RADIO"
+    ],
+    "valueType": "Common",
+    "global": false,
+    "discrete": true
+  },
+  {
+    "fieldType": "TEXT",
+    "id": "7ZlRurL5",
+    "name": "Your name",
+    "label": "Input your name",
+    "tooltip": null,
+    "currentValues": [],
+    "operators": [
+      "NULL",
+      "NOT_NULL",
+      "EQUALS",
+      "NOT_EQUALS",
+      "CONTAINS",
+      "DOES_NOT_CONTAIN"
+    ],
+    "convertibleTo": [
+      "TEXT_AREA"
+    ],
+    "pattern": null,
+    "message": null,
+    "valueType": "Common",
+    "global": false,
+    "discrete": false
+  },
+  {
+    "fieldType": "DUE_DATE",
+    "id": "0hPC6s8b",
+    "name": "Due Date",
+    "label": "Select the date by which the record must be completed.",
+    "tooltip": "Select the date by which the record must be completed. If the current process has an SLA, that will act as the maximum date available for selection.",
+    "currentValues": [],
+    "operators": [],
+    "convertibleTo": [],
+    "valueType": "Transient",
+    "global": false,
+    "discrete": false
+  },
+  {
+    "fieldType": "TEXT",
+    "id": "6VM9HQfI",
+    "name": "Input Email",
+    "label": "Input email",
+    "tooltip": null,
+    "currentValues": [],
+    "operators": [
+      "NULL",
+      "NOT_NULL",
+      "EQUALS",
+      "NOT_EQUALS",
+      "CONTAINS",
+      "DOES_NOT_CONTAIN"
+    ],
+    "convertibleTo": [
+      "TEXT_AREA"
+    ],
+    "pattern": null,
+    "message": null,
+    "valueType": "Common",
+    "global": false,
+    "discrete": false
+  }
+]

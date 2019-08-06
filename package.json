@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "demo": "ts-node hello.ts"
+    "demo": "ts-node ./src/entry.ts"
   },
   "devDependencies": {
     "@types/axios": "0.14.0",

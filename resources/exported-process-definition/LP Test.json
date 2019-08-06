@@ -1,0 +1,768 @@
+{
+  "process": {
+    "@id": 1,
+    "active": true,
+    "created": 1565078420827,
+    "updated": 1565093935585,
+    "name": "LP Test",
+    "color": "#d1481d",
+    "icon": "fas fa-gavel",
+    "workflows": [
+      {
+        "@id": 2,
+        "active": true,
+        "created": 1565078447707,
+        "updated": 1565094197715,
+        "name": "Simple Workflow",
+        "recordPrefix": "Simple Workflow",
+        "allowGroups": false,
+        "requireGroups": false,
+        "xpos": 367,
+        "ypos": 202,
+        "priority": 0,
+        "sla": {
+          "enabled": false,
+          "duration": 0
+        },
+        "workflowMaps": [],
+        "fields": [
+          {
+            "fieldType": "TEXT",
+            "@id": 3,
+            "active": true,
+            "created": 1565097045196,
+            "updated": 1565100300960,
+            "name": "Your name",
+            "label": "Input your name",
+            "tooltip": null,
+            "currentValues": [],
+            "workflow": 2,
+            "operators": [
+              "NULL",
+              "NOT_NULL",
+              "EQUALS",
+              "NOT_EQUALS",
+              "CONTAINS",
+              "DOES_NOT_CONTAIN"
+            ],
+            "convertibleTo": [
+              "TEXT_AREA"
+            ],
+            "workflowId": "Hf4o2r6L",
+            "pattern": null,
+            "message": null,
+            "valueType": "Common",
+            "global": false,
+            "discrete": false
+          },
+          {
+            "fieldType": "DUE_DATE",
+            "@id": 4,
+            "active": true,
+            "created": 1565078447706,
+            "updated": null,
+            "name": "Due Date",
+            "label": "Select the date by which the record must be completed.",
+            "tooltip": "Select the date by which the record must be completed. If the current process has an SLA, that will act as the maximum date available for selection.",
+            "currentValues": [],
+            "workflow": 2,
+            "operators": [],
+            "convertibleTo": [],
+            "workflowId": "Hf4o2r6L",
+            "valueType": "Transient",
+            "global": false,
+            "discrete": false
+          },
+          {
+            "fieldType": "SELECT",
+            "@id": 5,
+            "active": true,
+            "created": 1565097069531,
+            "updated": 1565100300996,
+            "name": "TransferTo",
+            "label": "Transfer to",
+            "tooltip": null,
+            "currentValues": [
+              {
+                "discriminator": "Common",
+                "@id": 6,
+                "active": true,
+                "created": null,
+                "updated": null,
+                "valueType": "Common",
+                "textValue": "Earth",
+                "numericValue": 1,
+                "isDefault": false,
+                "archived": false,
+                "priority": 1,
+                "fieldId": "gQrtnbyH",
+                "empty": false,
+                "default": false
+              },
+              {
+                "discriminator": "Common",
+                "@id": 7,
+                "active": true,
+                "created": null,
+                "updated": null,
+                "valueType": "Common",
+                "textValue": "Moon",
+                "numericValue": 2,
+                "isDefault": false,
+                "archived": false,
+                "priority": 0,
+                "fieldId": "gQrtnbyH",
+                "empty": false,
+                "default": false
+              }
+            ],
+            "workflow": 2,
+            "operators": [
+              "NULL",
+              "NOT_NULL",
+              "EQUALS",
+              "NOT_EQUALS"
+            ],
+            "convertibleTo": [
+              "CHECKBOX",
+              "MULTI_SELECT",
+              "RADIO"
+            ],
+            "workflowId": "Hf4o2r6L",
+            "valueType": "Common",
+            "global": false,
+            "discrete": true
+          },
+          {
+            "fieldType": "TEXT",
+            "@id": 8,
+            "active": true,
+            "created": 1565097056777,
+            "updated": 1565100300977,
+            "name": "Input Email",
+            "label": "Input email",
+            "tooltip": null,
+            "currentValues": [],
+            "workflow": 2,
+            "operators": [
+              "NULL",
+              "NOT_NULL",
+              "EQUALS",
+              "NOT_EQUALS",
+              "CONTAINS",
+              "DOES_NOT_CONTAIN"
+            ],
+            "convertibleTo": [
+              "TEXT_AREA"
+            ],
+            "workflowId": "Hf4o2r6L",
+            "pattern": null,
+            "message": null,
+            "valueType": "Common",
+            "global": false,
+            "discrete": false
+          }
+        ],
+        "steps": [
+          {
+            "stepType": "End",
+            "@id": 9,
+            "active": true,
+            "created": 1565078447707,
+            "updated": 1565100300947,
+            "name": "Transfer",
+            "priority": 2,
+            "allowEntitlements": true,
+            "xpos": 385,
+            "ypos": 55,
+            "isPublic": false,
+            "sla": {
+              "enabled": false,
+              "duration": 0
+            },
+            "workflow": 2,
+            "workflowId": "Hf4o2r6L",
+            "origin": false,
+            "chain": false,
+            "end": true
+          },
+          {
+            "stepType": "Origin",
+            "@id": 10,
+            "active": true,
+            "created": 1565093935585,
+            "updated": 1565099411289,
+            "name": "Input Email",
+            "priority": 1,
+            "allowEntitlements": true,
+            "xpos": 218,
+            "ypos": 55,
+            "isPublic": false,
+            "sla": {
+              "enabled": false,
+              "duration": 0
+            },
+            "workflow": 2,
+            "workflowId": "Hf4o2r6L",
+            "origin": true,
+            "chain": false,
+            "end": false
+          },
+          {
+            "stepType": "Origin",
+            "@id": 11,
+            "active": true,
+            "created": 1565078447707,
+            "updated": 1565099411289,
+            "name": "Input Name",
+            "priority": 1,
+            "allowEntitlements": true,
+            "xpos": 55,
+            "ypos": 55,
+            "isPublic": false,
+            "sla": {
+              "enabled": false,
+              "duration": 0
+            },
+            "workflow": 2,
+            "workflowId": "Hf4o2r6L",
+            "origin": true,
+            "chain": false,
+            "end": false
+          }
+        ],
+        "sequence": null,
+        "process": 1,
+        "userGroups": [],
+        "processId": "GcZFDKYT",
+        "objectName": "Simple Workflow",
+        "nodes": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "imported": false,
+    "copied": false
+  },
+  "workflows": [
+    2
+  ],
+  "workflowMaps": [],
+  "fields": [
+    4,
+    3,
+    5,
+    8
+  ],
+  "layouts": [],
+  "steps": [
+    10,
+    11,
+    9
+  ],
+  "visualReports": [],
+  "sections": [
+    {
+      "sectionType": "FORM_SECTION",
+      "@id": 12,
+      "active": true,
+      "created": 1565093935598,
+      "updated": 1565094223115,
+      "name": "Section2",
+      "color": "#00a3de",
+      "icon": "fas fa-bookmark",
+      "priority": 1,
+      "colspan": 4,
+      "collapsed": false,
+      "defaultState": "INACTIVE",
+      "conditionsEnabled": false,
+      "step": 10,
+      "parent": null,
+      "stepId": "sEMbv97X",
+      "parentId": null,
+      "subSections": [
+        {
+          "sectionType": "SUB_SECTION",
+          "@id": 13,
+          "active": true,
+          "created": 1565093935610,
+          "updated": 1565098935213,
+          "name": "SubSection2",
+          "color": "#00a3de",
+          "icon": "fas fa-bookmark",
+          "priority": 1,
+          "colspan": 1,
+          "collapsed": false,
+          "defaultState": "INACTIVE",
+          "conditionsEnabled": false,
+          "step": null,
+          "parent": 12,
+          "stepId": null,
+          "parentId": "23NlOnzK",
+          "subSections": [
+            {
+              "sectionType": "FIELD_LINK",
+              "@id": 14,
+              "active": true,
+              "created": 1565098935213,
+              "updated": 1565098935745,
+              "name": "TransferTo wrapper",
+              "color": "#00a3de",
+              "icon": "fas fa-bookmark",
+              "priority": 2,
+              "colspan": 4,
+              "collapsed": false,
+              "defaultState": "INACTIVE",
+              "conditionsEnabled": false,
+              "step": null,
+              "parent": 13,
+              "stepId": null,
+              "parentId": "BKjVYzoj",
+              "subSections": [],
+              "required": false,
+              "enabled": true,
+              "labelDisplayType": "ALL",
+              "field": 5,
+              "fieldId": "gQrtnbyH",
+              "node": null
+            },
+            {
+              "sectionType": "FIELD_LINK",
+              "@id": 15,
+              "active": true,
+              "created": 1565094213883,
+              "updated": 1565098935745,
+              "name": "Input Email wrapper",
+              "color": "#00a3de",
+              "icon": "fas fa-bookmark",
+              "priority": 1,
+              "colspan": 4,
+              "collapsed": false,
+              "defaultState": "INACTIVE",
+              "conditionsEnabled": false,
+              "step": null,
+              "parent": 13,
+              "stepId": null,
+              "parentId": "BKjVYzoj",
+              "subSections": [],
+              "required": true,
+              "enabled": true,
+              "labelDisplayType": "ALL",
+              "field": 8,
+              "fieldId": "6VM9HQfI",
+              "node": null
+            }
+          ],
+          "node": null
+        }
+      ],
+      "node": 10
+    },
+    13,
+    15,
+    14,
+    {
+      "sectionType": "FORM_SECTION",
+      "@id": 16,
+      "active": true,
+      "created": 1565080864721,
+      "updated": 1565094247493,
+      "name": "Section3",
+      "color": "#00a3de",
+      "icon": "fas fa-bookmark",
+      "priority": 1,
+      "colspan": 4,
+      "collapsed": false,
+      "defaultState": "INACTIVE",
+      "conditionsEnabled": false,
+      "step": 9,
+      "parent": null,
+      "stepId": "auy7PFLH",
+      "parentId": null,
+      "subSections": [
+        {
+          "sectionType": "SUB_SECTION",
+          "@id": 17,
+          "active": true,
+          "created": 1565080867085,
+          "updated": 1565094255063,
+          "name": "SubSection3",
+          "color": "#00a3de",
+          "icon": "fas fa-bookmark",
+          "priority": 1,
+          "colspan": 1,
+          "collapsed": false,
+          "defaultState": "INACTIVE",
+          "conditionsEnabled": false,
+          "step": null,
+          "parent": 16,
+          "stepId": null,
+          "parentId": "Cxl1zyVc",
+          "subSections": [],
+          "node": null
+        }
+      ],
+      "node": 9
+    },
+    17,
+    {
+      "sectionType": "FORM_SECTION",
+      "@id": 18,
+      "active": true,
+      "created": 1565078659768,
+      "updated": 1565078848219,
+      "name": "Section1",
+      "color": "#00a3de",
+      "icon": "fas fa-bookmark",
+      "priority": 1,
+      "colspan": 4,
+      "collapsed": false,
+      "defaultState": "INACTIVE",
+      "conditionsEnabled": false,
+      "step": 11,
+      "parent": null,
+      "stepId": "NyWvuVHi",
+      "parentId": null,
+      "subSections": [
+        {
+          "sectionType": "SUB_SECTION",
+          "@id": 19,
+          "active": true,
+          "created": 1565078829807,
+          "updated": 1565078844231,
+          "name": "SubSection1",
+          "color": "#00a3de",
+          "icon": "fas fa-bookmark",
+          "priority": 1,
+          "colspan": 1,
+          "collapsed": false,
+          "defaultState": "INACTIVE",
+          "conditionsEnabled": false,
+          "step": null,
+          "parent": 18,
+          "stepId": null,
+          "parentId": "2gNE5prr",
+          "subSections": [
+            {
+              "sectionType": "FIELD_LINK",
+              "@id": 20,
+              "active": true,
+              "created": 1565078835150,
+              "updated": 1565097045196,
+              "name": "Your name wrapper",
+              "color": "#00a3de",
+              "icon": "fas fa-bookmark",
+              "priority": 1,
+              "colspan": 4,
+              "collapsed": false,
+              "defaultState": "INACTIVE",
+              "conditionsEnabled": false,
+              "step": null,
+              "parent": 19,
+              "stepId": null,
+              "parentId": "QTWDC0Az",
+              "subSections": [],
+              "required": true,
+              "enabled": true,
+              "labelDisplayType": "ALL",
+              "field": 3,
+              "fieldId": "7ZlRurL5",
+              "node": null
+            }
+          ],
+          "node": null
+        }
+      ],
+      "node": 11
+    },
+    19,
+    20
+  ],
+  "formConditions": [],
+  "paths": [
+    {
+      "pathType": "NEXT",
+      "@id": 21,
+      "active": true,
+      "created": 1565078447760,
+      "updated": 1565094053370,
+      "allowInternal": false,
+      "allowExternal": false,
+      "requireAssignee": false,
+      "target": 10,
+      "source": 11,
+      "assigneeField": null,
+      "targetId": "sEMbv97X",
+      "sourceId": "NyWvuVHi"
+    },
+    {
+      "pathType": "NEXT",
+      "@id": 22,
+      "active": true,
+      "created": 1565093935641,
+      "updated": null,
+      "allowInternal": false,
+      "allowExternal": false,
+      "requireAssignee": false,
+      "target": 9,
+      "source": 10,
+      "assigneeField": null,
+      "targetId": "auy7PFLH",
+      "sourceId": "sEMbv97X"
+    }
+  ],
+  "roles": [
+    {
+      "@id": 23,
+      "active": true,
+      "created": 1551306446265,
+      "updated": 1565099300558,
+      "name": "Admin: All Entitlements",
+      "locked": false,
+      "moduleEntitlements": [
+        {
+          "@id": 24,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 25,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099300558,
+            "value": "A_ASSIGN",
+            "onlyUse": true,
+            "tab": "Application",
+            "name": "Assign"
+          }
+        },
+        {
+          "@id": 26,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 27,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099300558,
+            "value": "A_ALL_FIELDS",
+            "onlyUse": false,
+            "tab": "Application",
+            "name": "All Fields"
+          }
+        },
+        {
+          "@id": 28,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 29,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099285145,
+            "value": "ADMIN_ALL",
+            "onlyUse": true,
+            "tab": "Admin",
+            "name": "All"
+          }
+        },
+        {
+          "@id": 30,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 31,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099266870,
+            "value": "R_STATUS",
+            "onlyUse": true,
+            "tab": "Report",
+            "name": "Status"
+          }
+        },
+        {
+          "@id": 32,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 33,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099300558,
+            "value": "R_PRODUCTIVITY",
+            "onlyUse": true,
+            "tab": "Report",
+            "name": "Productivity"
+          }
+        },
+        {
+          "@id": 34,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 35,
+            "active": true,
+            "created": 1551131771741,
+            "updated": 1565099300558,
+            "value": "R_DASHBOARDS",
+            "onlyUse": false,
+            "tab": "Report",
+            "name": "Dashboards"
+          }
+        },
+        {
+          "@id": 36,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 37,
+            "active": true,
+            "created": 1551131760667,
+            "updated": 1565099300558,
+            "value": "A_API_ACCESS",
+            "onlyUse": true,
+            "tab": "Application",
+            "name": "API Access"
+          }
+        },
+        {
+          "@id": 38,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 39,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099300558,
+            "value": "A_IMPORT",
+            "onlyUse": true,
+            "tab": "Application",
+            "name": "Import"
+          }
+        },
+        {
+          "@id": 40,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099285145,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 41,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099285145,
+            "value": "A_BUILD",
+            "onlyUse": false,
+            "tab": "Application",
+            "name": "Build"
+          }
+        },
+        {
+          "@id": 42,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 43,
+            "active": true,
+            "created": 1551131754428,
+            "updated": 1565099285145,
+            "value": "R_RECORDS",
+            "onlyUse": true,
+            "tab": "Report",
+            "name": "Records"
+          }
+        },
+        {
+          "@id": 44,
+          "active": true,
+          "created": 1551306452263,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "module": {
+            "@id": 45,
+            "active": true,
+            "created": 1551131788875,
+            "updated": 1565099300558,
+            "value": "R_TABLE_REPORTS",
+            "onlyUse": false,
+            "tab": "Report",
+            "name": "Table Reports"
+          }
+        }
+      ],
+      "stepEntitlements": [
+        {
+          "@id": 46,
+          "active": true,
+          "created": 1565099266870,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "step": 11,
+          "node": 11
+        },
+        {
+          "@id": 47,
+          "active": true,
+          "created": 1565099300558,
+          "updated": null,
+          "operationType": "EDIT",
+          "role": 23,
+          "step": 9,
+          "node": 9
+        },
+        {
+          "@id": 48,
+          "active": true,
+          "created": 1565099285145,
+          "updated": 1565099300558,
+          "operationType": "EDIT",
+          "role": 23,
+          "step": 10,
+          "node": 10
+        }
+      ],
+      "stepCount": 3,
+      "moduleCount": 11,
+      "nodeEntitlements": [
+        46,
+        47,
+        48
+      ]
+    }
+  ],
+  "tableReports": [],
+  "jobs": [],
+  "dashboards": []
+}
